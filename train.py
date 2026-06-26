@@ -7,8 +7,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# mlflow.set_tracking_uri("http://127.0.0.1:5000")
-mlflow.set_tracking_uri("http://mlflow:5000")
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
+# mlflow.set_tracking_uri("http://mlflow:5000")
 
 # Load Wine dataset
 wine = load_wine()
@@ -23,7 +23,7 @@ max_depth = 10
 n_estimators = 5
 
 # Mention your experiment below
-mlflow.set_experiment('default')
+mlflow.set_experiment('Default')
 
 with mlflow.start_run():
     rf = RandomForestClassifier(max_depth=max_depth, n_estimators=n_estimators, random_state=42)
